@@ -132,6 +132,24 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
+              // Device Info Button Example
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Card(
+                  elevation: 4,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Device Info Button Example', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 12),
+                        Center(child: FlutterPluginMiniUI.deviceInfoButton()),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
