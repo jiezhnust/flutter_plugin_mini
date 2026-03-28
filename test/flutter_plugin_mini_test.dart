@@ -10,6 +10,15 @@ class MockFlutterPluginMiniPlatform
 
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+
+  @override
+  Future<Map<String, dynamic>?> getDeviceInfo() => Future.value({
+        'platform': 'Android',
+        'version': '13',
+        'model': 'Pixel 6',
+        'manufacturer': 'Google',
+        'device': 'oriole',
+      });
 }
 
 void main() {

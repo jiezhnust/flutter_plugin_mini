@@ -14,4 +14,10 @@ class MethodChannelFlutterPluginMini extends FlutterPluginMiniPlatform {
     final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
+
+  @override
+  Future<Map<String, dynamic>?> getDeviceInfo() async {
+    final deviceInfo = await methodChannel.invokeMapMethod<String, dynamic>('getDeviceInfo');
+    return deviceInfo;
+  }
 }
